@@ -1,0 +1,10 @@
+#RAILS_ENV#:
+  adapter:      mysql
+  host:         ss1-mysql-vhost
+  database:     simulscribe_#RAILS_ENV#
+  username:     simulscribe
+  password:     simulscribe
+  socket:       /var/lib/mysql/mysql.sock
+  pool:         40
+  wait_timeout: 5
+  reconnect:    true

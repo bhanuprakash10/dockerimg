@@ -1,0 +1,9 @@
+# for replica set connections, instead of host and port, use this ...
+# hosts: [[localhost, 27017], [localhost, 27018]]
+#RAILS_ENV#:
+  host: ss2-mongo-vhost
+  port: 27017
+  database: simulscribe2_#RAILS_ENV#
+  request_collection_name:  delayed_backend_mongoid_jobs
+  response_collection_name: delayed_backend_phonetag_jobs
+  media_s3_sharing: false

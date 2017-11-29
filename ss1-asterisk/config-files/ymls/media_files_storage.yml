@@ -1,0 +1,5 @@
+#RAILS_ENV#:
+  :root_dir: /media-files/primary/ss1
+  :root_backup_dir: /media-files/secondary/ss1
+  :store_dir: stored_media_files
+  :cache_dir: cached_media_files

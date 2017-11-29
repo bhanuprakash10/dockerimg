@@ -1,0 +1,12 @@
+default_settings: &default_settings
+#  :access_key_id: AKIAIWTZFU75HMW6EBMQ
+#  :secret_access_key: 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
+#  :access_key_id: AKIAI7LO2EMFHGTSVJ2A
+#  :secret_access_key: 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
+#  :bucket: simulscribe_development_media_files
+  :access_key_id: AKIAJAP34TI6VRJZ2GAQ
+  :secret_access_key: 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
+  :bucket: bootball-testing-media-files
+
+#RAILS_ENV#:
+  <<: *default_settings

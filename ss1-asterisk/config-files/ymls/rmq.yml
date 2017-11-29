@@ -1,0 +1,7 @@
+#RAILS_ENV#:
+  :hosts: ["localhost"]
+  :port: 5672
+  :vhost: "/"
+  :user: "rabbitmq"
+  :pass: "rabbitmq"
+  :heartbeat: 30

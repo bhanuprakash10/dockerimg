@@ -1,0 +1,14 @@
+#RAILS_ENV#:
+  :login: "3D5zuLKMv6fL"
+  :secret_token: "4r6t49QDb97b6Pbj"
+  :endpoint: :test
+  :verify_ssl: false
+  :authnet_request_url: https://apitest.authorize.net/xml/v1/request.api #https://api.authorize.net/xml/v1/request.api
+  :authnet_hostform_url:
+    :add: https://test.authorize.net/profile/addPayment #https://secure.authorize.net/profile/manage
+    :edit: https://test.authorize.net/profile/editPayment
+  :hostform_profile_setting:
+    :return_url_host: http://docker-app
+    :return_url_text: Proceed
+    :page_border_visible: true
+  :validation_mode: :testMode

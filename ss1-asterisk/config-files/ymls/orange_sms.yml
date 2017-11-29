@@ -1,0 +1,6 @@
+default_settings: &default_settings
+  api_key: 8d6bb098b93
+  url: http://sms.beta.orange-api.net/sms/sendSMS.xml
+
+#RAILS_ENV#:
+  <<: *default_settings

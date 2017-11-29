@@ -1,0 +1,12 @@
+#RAILS_ENV#:
+  :address: "localhost"
+  :port: 25
+  :domain: "localhost"
+  :incoming:
+    -
+      :host: "localhost"
+      :user: "queue0@my.simulscribe.com"
+      :password: "queue0"
+      :receiver: "MessageMailer"
+      :process: true
+

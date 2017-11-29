@@ -1,0 +1,17 @@
+#RAILS_ENV#:
+  :ss1_url_settings:
+    :protocol: http
+    :host: docker-app
+    :only_path: false
+  :ss1_status_url_settings:
+    :host: docker-app
+    :protocol: http
+    :only_path: false
+  :ss2_url_settings:
+    :protocol: http
+    :host: ss2-web-vhost
+    :only_path: false
+  :pbs_url_settings:
+    :protocol: http
+    :host: docker-pbs
+    :only_path: false

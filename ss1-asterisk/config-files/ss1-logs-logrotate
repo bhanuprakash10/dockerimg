@@ -1,0 +1,55 @@
+/var/log/rails-ss1.log
+{
+  copytruncate
+  rotate 4
+  daily
+  missingok
+  notifempty
+  delaycompress
+  compress
+  postrotate
+    reload rsyslog >/dev/null 2>&1 || true
+  endscript
+}
+
+/var/log/ss1-xalog.log
+{
+  copytruncate
+  rotate 4
+  daily
+  missingok
+  notifempty
+  delaycompress
+  compress
+  postrotate
+    reload rsyslog >/dev/null 2>&1 || true
+  endscript
+}
+
+/u/apps/simulscribe/current/log/*.log
+{
+  copytruncate
+  rotate 4
+  daily
+  missingok
+  notifempty
+  delaycompress
+  compress
+  postrotate
+    reload rsyslog >/dev/null 2>&1 || true
+  endscript
+}
+
+/var/log/asterisk/messages /var/log/asterisk/debug_log
+{
+        rotate 4
+        daily
+        copytruncate
+        missingok
+        notifempty
+        delaycompress
+        compress
+        postrotate
+                /etc/init.d/asterisk reload >/dev/null 2>&1 || true
+        endscript
+}

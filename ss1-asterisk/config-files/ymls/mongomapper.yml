@@ -1,0 +1,4 @@
+#RAILS_ENV#:
+  host: ss1-mongo-vhost
+  port: 27017
+  database: simulscribe_#RAILS_ENV#

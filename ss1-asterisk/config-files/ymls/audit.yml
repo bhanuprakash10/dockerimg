@@ -1,0 +1,4 @@
+#RAILS_ENV#:
+  :basedir: /u/apps/simulscribe/current/log/audit
+  :filename: ptg-subscriber-audit-v1.0  
+  :extension: csv

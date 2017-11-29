@@ -1,0 +1,4 @@
+#RAILS_ENV#:
+  :history_domain: docker-app
+  :history_url:    https://docker-vhost.phonetag.com/member/inbox
+  :member_view_message: Viwe Your History Data

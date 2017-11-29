@@ -1,0 +1,4 @@
+#RAILS_ENV#:
+  :domain: simulscribe.devel
+  :session_key: com.phonetag.simulscribe1.devel
+  :secret_token: some_secret_word

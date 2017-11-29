@@ -1,0 +1,5 @@
+[ffmpeg-0.6.5]
+name=ffmpeg
+baseurl=http://ftp.riken.jp/Linux/dag/redhat/el6/en/x86_64/rpmforge/
+enabled=1
+gpgcheck=0

@@ -1,0 +1,4 @@
+#RAILS_ENV#:
+  listens_on: docker-app:22122
+  queuing_happens_on: [docker-app:22122]
+#  queuing_happens_on: [IP1:22122, IP2:22122]

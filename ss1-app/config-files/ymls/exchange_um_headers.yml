@@ -1,0 +1,93 @@
+outgoing:
+  email: exchange@exum.simulscribe.com
+  bcc: vmailng@microsoft.com
+productID: 606286
+productVersion: "3.11.6.183"
+schemaVersion: "1.0.0.0"
+information:
+  linkURL: "http://www.phonetag.com"
+  lang: en
+  linkText: "PhoneTag"
+  text: "Voicemail transcription services provided by PhoneTag."
+returnPath: root@exum.simulscribe.com
+
+  
+
+# This describes the Exchange UM interface on the RFC2822 level, including
+# the appropriate headers that are required for incoming and outgoing messages,
+# how incoming message headers map to outgoing message headers, plus extra content
+# that the software will use to build a proper message.
+#
+# The ExchangeUM object caches this information and utilizes this information
+# when extracting information from and building messages.
+
+incoming_headers:
+  To: required
+  From: required
+  Date: required
+  Return-Path: required
+  Message-ID: required
+  Content-Class: "MS-Exchange-UM-Partner"
+  X-MS-Exchange-UM-PartnerContent: "voice"
+  X-MS-Exchange-UM-PartnerAssignedID: required
+  X-CallingTelephoneNumber: ~
+  X-MS-Exchange-UM-PartnerContext: required
+  X-VoiceMessageDuration: required
+  X-VoiceMessageSenderName: ~
+
+outgoing_headers:
+  To: required
+  From: exchange@exum.simulscribe.com
+#  Date: required
+#  Message-ID: required
+  In-Reply-To: required
+  References: required
+  Content-Class: "MS-Exchange-UM-Partner"
+  Return-Path: required
+  X-MS-Exchange-UM-PartnerContent: Voice+Transcript
+  X-MS-Exchange-UM-PartnerContext: required
+  X-MS-Exchange-UM-PartnerStatus: required
+
+  
+  # A map between the data that is going out based on the original incoming message
+outgoing_to_incoming:
+  To: From
+  In-Reply-To: Message-ID
+  References: Message-ID
+  X-MS-Exchange-UM-PartnerContext: X-MS-Exchange-UM-PartnerContext
+  Return-Path: From
+
+  # This is the list of recognition results to be used in both the XML result
+  # as well as the message header.
+
+result_type:
+  transcribed: success
+  blank: reject
+  failed: quality
+  declined: declined
+  server: server
+  bad_request: bad_request
+  
+recognition_results:
+  success:
+    xml: success
+    header: "200 OK"
+  language:
+    xml: languagenotsupported
+    header: "210 Language not supported"
+  quality:
+    xml: audioqualitypoor
+    header: "211 Poor audio quality"
+  reject:
+    xml: rejected
+    header: "212 Rejected : Audio does not contain anything to be transcribed"
+  declined:
+    xml: rejected
+    header: "212 Rejected : Declined"
+  bad_request:
+    xml: badrequest
+    header: "400 Bad Request"
+  server:
+    xml: systemerror
+    header: "500 Internal Server Error"
+    

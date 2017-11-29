@@ -1,0 +1,7 @@
+default_settings: &default_settings
+  :port: 27017
+
+#RAILS_ENV#:
+  :host: localhost
+  :database: simulscribe_#RAILS_ENV#
+  <<: *default_settings

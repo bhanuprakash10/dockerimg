@@ -1,0 +1,14 @@
+default_settings: &default_settings
+  :host: ""
+  :user: "queue@smtp.simulscribe.com"
+  :password: ""
+  :receivers: ["email_processor/entel", "email_processor/verizon"]
+  :email_on_severity: 1
+  :entel_did: ""
+  :entel_response_url: ""
+  :verizon_did: ""
+  :verizon_alltel_did: ""
+  :sleep_seconds: 15
+
+#RAILS_ENV#:
+  <<: *default_settings

@@ -1,0 +1,22 @@
+default_settings: &default_settings
+  :country: US
+  :diff: false
+  :show_hesitations: false
+  :words_only: true
+  :show_confidence_score: false
+  :show_word_timestamp: false
+  :input_format: txt
+  :count_words: false
+  :nuance_markup: true
+  :threshold: 0.0
+  :output_charset: utf-8
+  :read_config: false
+  :has_tags: false
+  :word_threshold: 1.0
+  :profanity_filter: true
+  :create_chunks: false
+  :tags_enabled: false
+
+#RAILS_ENV#:
+  defaults: *default_settings
+  hosts: [['localhost', 3500]]

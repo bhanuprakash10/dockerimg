@@ -1,0 +1,16 @@
+#RAILS_ENV#:
+  max_retries: 2
+  retry_interval: 30
+  timeout: 30
+  ssl_verify_host: true
+  eps_host: docker-vhost
+  pp_host: docker-app
+  eps_protocol: http
+  pp_protocol: http
+  eps_delay_multiplier: 10 
+  pp_delay_seconds: 5
+  eps_default_service_type: SemiAuto
+  eps_default_url: https://eps-vhost:4433/conversions/nuance-xx-pushscoring/ 
+  eps_default_language_code: en-US
+  eps_default_pp: python_based
+  backup_audio: false

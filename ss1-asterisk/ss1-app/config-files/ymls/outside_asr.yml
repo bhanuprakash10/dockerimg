@@ -1,0 +1,11 @@
+default_settings: &default_settings
+  :not_in_cloud: 0
+
+#RAILS_ENV#:
+  <<: *default_settings
+
+## example:
+##   <<: *default_settings
+##   :not_in_cloud:	True
+##   :sqs_proxy_host:	localhost
+##   :sqs_proxy_port:	26667
